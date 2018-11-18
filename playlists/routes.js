@@ -5,6 +5,7 @@ const Song = require('../songs/model')
 
 const router = new Router()
 
+
 router.post('/playlists', (req, res, next) => {
     Playlist
       .create(req.body)
@@ -34,7 +35,7 @@ router.post('/playlists', (req, res, next) => {
       .then(playlist => {
         if (!playlist) {
           return res.status(404).send({
-            message: `Playlist does not exist`
+            message: `This playlist does not exist`
           })
         }
         return res.send(playlist)
@@ -48,12 +49,12 @@ router.post('/playlists', (req, res, next) => {
       .then(playlist => {
         if (!playlist) {
           return res.status(404).send({
-            message: `Playlist does not exist`
+            message: `This playlist does not exist`
           })
         }
         return playlist.destroy()
           .then(() => res.send({
-            message: `Playlist was deleted`
+            message: `You deleted this playlist`
           }))
       })
       .catch(error => next(error))

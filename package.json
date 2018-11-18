@@ -1,5 +1,5 @@
 {
-  "name": "customers-api",
+  "name": "spotify-api",
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
@@ -10,5 +10,8 @@
     "jsonwebtoken": "^8.4.0",
     "pg": "^7.4.3",
     "sequelize": "^4.38.0"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
