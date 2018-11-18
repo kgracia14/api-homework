@@ -8,5 +8,6 @@ sequelize.sync()
     console.log('Sequelize updated database schema')
   })
   .catch(console.error)
+  
 
 module.exports = sequelize
